@@ -1,0 +1,469 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>旧版本问题 · AL网络框架替换及使用文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Aaron Tsai">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="新版本优势.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    目的
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="旧版本问题.html">
+            
+                <a href="旧版本问题.html">
+            
+                    
+                    旧版本问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="新版本优势.html">
+            
+                <a href="新版本优势.html">
+            
+                    
+                    新版本优势
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../封装思想/封装思想.html">
+            
+                <a href="../封装思想/封装思想.html">
+            
+                    
+                    封装思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../依赖库/">
+            
+                <a href="../依赖库/">
+            
+                    
+                    依赖库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../依赖库/Rxjava2.html">
+            
+                <a href="../依赖库/Rxjava2.html">
+            
+                    
+                    RxJava2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../依赖库/Gson.html">
+            
+                <a href="../依赖库/Gson.html">
+            
+                    
+                    Gson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../依赖库/RxAndroid.html">
+            
+                <a href="../依赖库/RxAndroid.html">
+            
+                    
+                    RxAndroid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../依赖库/RxLifeCyler.html">
+            
+                <a href="../依赖库/RxLifeCyler.html">
+            
+                    
+                    RxLifeCycler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../依赖库/OkHttp3.html">
+            
+                <a href="../依赖库/OkHttp3.html">
+            
+                    
+                    Okhttp3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../依赖库/Stetho.html">
+            
+                <a href="../依赖库/Stetho.html">
+            
+                    
+                    Stetho
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../调用方式/">
+            
+                <a href="../调用方式/">
+            
+                    
+                    调用方式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../调用方式/基本调用.html">
+            
+                <a href="../调用方式/基本调用.html">
+            
+                    
+                    基本调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../调用方式/嵌套调用.html">
+            
+                <a href="../调用方式/嵌套调用.html">
+            
+                    
+                    嵌套调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../调用方式/并发调用.html">
+            
+                <a href="../调用方式/并发调用.html">
+            
+                    
+                    并发调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../UML/">
+            
+                <a href="../UML/">
+            
+                    
+                    UML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >旧版本问题</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x65E7;&#x7248;&#x672C;&#x95EE;&#x9898;">&#x65E7;&#x7248;&#x672C;&#x95EE;&#x9898;</h1>
+<p>&#x2003;<em>android-async-http</em>&#x4F5C;&#x4E3A;15&#x5E74;&#x706B;&#x7206;&#x7684;&#x7F51;&#x7EDC;&#x6846;&#x67B6;&#x6CBF;&#x7528;&#x81F3;&#x4ECA;&#xFF0C;&#x9996;&#x5148;&#x5F97;&#x80AF;&#x5B9A;&#x4E0B;&#x5B83;&#x8FD8;&#x662F;&#x5F88;&#x5F3A;&#x5927;&#x7684;&#x3002;&#x6BD5;&#x7ADF;&#x5B83;&#x4E5F;&#x89E3;&#x51B3;&#x4E86;<strong>AKULAKU</strong>&#x4E24;&#x5E74;&#x7684;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x4F7F;&#x7528;&#xFF0C;&#x8FD8;&#x662F;&#x633A;&#x7A33;&#x5B9A;&#x7684;&#x3002;&#x8FD9;&#x5957;&#x7F51;&#x7EDC;&#x6846;&#x67B6;&#x5185;&#x90E8;&#x5B9E;&#x73B0;&#x662F;&#x57FA;&#x4E8E;HttpClient,&#x60F3;&#x5FC5;&#x4F60;&#x4EEC;&#x80AF;&#x5B9A;&#x77E5;&#x9053;6.0&#x4E4B;&#x540E;HttpClient&#x662F;&#x4E0D;&#x662F;&#x7CFB;&#x7EDF;&#x81EA;&#x5E26;&#x7684;&#x4E86;&#x3002;&#x957F;&#x8BDD;&#x77ED;&#x8BF4;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x5C31;&#x7528;&#x5217;&#x8868;&#x7684;&#x5F62;&#x5F0F;&#x7B80;&#x8981;&#x5C55;&#x793A;&#x73B0;&#x6709;&#x7F51;&#x7EDC;&#x6846;&#x67B6;(&#x5F53;&#x7136;&#x5305;&#x62EC;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x5C01;&#x88C5;&#x7684;&#x7F3A;&#x9677;&#x54C8;)&#x5728;&#x6211;&#x4EEC;app&#x4E2D;&#x7684;&#x4F7F;&#x7528;&#x95EE;&#x9898;&#x5217;&#x51FA;&#x7F3A;&#x9677;&#x3002;</p>
+<ul>
+<li>jar&#x5305;&#x7684;&#x65B9;&#x5F0F;&#x5F15;&#x5165;&#x5347;&#x7EA7;&#x7EF4;&#x62A4;&#x56F0;&#x96BE;</li>
+<li>&#x4E0D;&#x652F;&#x6301;&#x7EBF;&#x7A0B;&#x53D8;&#x66F4;,&#x5F97;&#x4F7F;&#x7528;AsyncHttpClient/SyncHttpClient&#xFF0C;&#x4E0D;&#x7075;&#x6D3B;</li>
+<li>&#x4E0E;Activity/Fragment&#x751F;&#x547D;&#x5468;&#x671F;&#x4E0D;&#x80FD;&#x7ED1;&#x5B9A;&#x5230;&#x4E00;&#x8D77;,&#x7F51;&#x7EDC;&#x56DE;&#x8C03;&#x53CA;&#x6613;&#x51FA;&#x73B0;&#x7A7A;&#x6307;&#x9488;</li>
+<li>model&#x904D;&#x5730;&#x90FD;&#x662F;&#x4E0E;&#x4E1A;&#x52A1;&#x5F3A;&#x8026;&#x5408;&#xFF0C;&#x96BE;&#x4EE5;&#x7EF4;&#x62A4;</li>
+<li><a href="https://cowmanchiang.me/gitbook/gitbook/contents/how/links.html" target="_blank">HttpClient&#x4E0E;OkHttp&#x7684;&#x5DEE;&#x5F02;</a></li>
+<li>&#x8C03;&#x7528;&#x65B9;&#x5F0F;&#x4E0D;&#x662F;&#x5F88;&#x7B80;&#x6D01;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 目的">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="新版本优势.html" class="navigation navigation-next " aria-label="Next page: 新版本优势">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"旧版本问题","level":"1.2.1","depth":2,"next":{"title":"新版本优势","level":"1.2.2","depth":2,"path":"目的/新版本优势.md","ref":"目的/新版本优势.md","articles":[]},"previous":{"title":"目的","level":"1.2","depth":1,"path":"目的/README.md","ref":"目的/README.md","articles":[{"title":"旧版本问题","level":"1.2.1","depth":2,"path":"目的/旧版本问题.md","ref":"目的/旧版本问题.md","articles":[]},{"title":"新版本优势","level":"1.2.2","depth":2,"path":"目的/新版本优势.md","ref":"目的/新版本优势.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Aaron Tsai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"AL网络框架替换及使用文档","gitbook":"*","description":"由于async-http-client的网络框架已过时，造成维护成本高，开发易用性差，现将其替换成okhttp3"},"file":{"path":"目的/旧版本问题.md","mtime":"2018-03-29T12:06:37.620Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-27T11:33:50.789Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,547 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>嵌套调用 · AL网络框架替换及使用文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Aaron Tsai">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="并发调用.html" />
+    
+    
+    <link rel="prev" href="基本调用.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../目的/">
+            
+                <a href="../目的/">
+            
+                    
+                    目的
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../目的/旧版本问题.html">
+            
+                <a href="../目的/旧版本问题.html">
+            
+                    
+                    旧版本问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../目的/新版本优势.html">
+            
+                <a href="../目的/新版本优势.html">
+            
+                    
+                    新版本优势
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../封装思想/封装思想.html">
+            
+                <a href="../封装思想/封装思想.html">
+            
+                    
+                    封装思想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../依赖库/">
+            
+                <a href="../依赖库/">
+            
+                    
+                    依赖库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../依赖库/Rxjava2.html">
+            
+                <a href="../依赖库/Rxjava2.html">
+            
+                    
+                    RxJava2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../依赖库/Gson.html">
+            
+                <a href="../依赖库/Gson.html">
+            
+                    
+                    Gson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../依赖库/RxAndroid.html">
+            
+                <a href="../依赖库/RxAndroid.html">
+            
+                    
+                    RxAndroid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../依赖库/RxLifeCyler.html">
+            
+                <a href="../依赖库/RxLifeCyler.html">
+            
+                    
+                    RxLifeCycler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../依赖库/OkHttp3.html">
+            
+                <a href="../依赖库/OkHttp3.html">
+            
+                    
+                    Okhttp3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../依赖库/Stetho.html">
+            
+                <a href="../依赖库/Stetho.html">
+            
+                    
+                    Stetho
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    调用方式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="基本调用.html">
+            
+                <a href="基本调用.html">
+            
+                    
+                    基本调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="嵌套调用.html">
+            
+                <a href="嵌套调用.html">
+            
+                    
+                    嵌套调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="并发调用.html">
+            
+                <a href="并发调用.html">
+            
+                    
+                    并发调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../UML/">
+            
+                <a href="../UML/">
+            
+                    
+                    UML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >嵌套调用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5D4C;&#x5957;&#x8C03;&#x7528;">&#x5D4C;&#x5957;&#x8C03;&#x7528;</h1>
+<blockquote>
+<p>&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x4E2D;&#x7531;&#x4E8E;&#x8BF7;&#x6C42;&#x7F51;&#x7EDC;&#x6570;&#x636E;&#x9891;&#x7E41;,&#x5F80;&#x5F80;&#x540E;&#x9762;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x53C2;&#x6570;&#x662F;&#x524D;&#x9762;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x4E8E;&#x662F;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x5728;&#x524D;&#x9762;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x54CD;&#x5E94;&#x4E2D;&#x53BB;&#x53D1;&#x9001;&#x7B2C;&#x4E8C;&#x4E2A;&#x8BF7;&#x6C42;&#xFF0C;&#x4ECE;&#x800C;&#x9020;&#x6210;<strong>&#x5D4C;&#x5957;&#x8BF7;&#x6C42;</strong>&#x7684;&#x95EE;&#x9898;&#x3002;&#x5982;&#x679C;&#x5C42;&#x6B21;&#x8F83;&#x591A;&#xFF0C;&#x4EE3;&#x7801;&#x53EF;&#x8BFB;&#x6027;&#x548C;&#x6548;&#x7387;&#x90FD;&#x662F;&#x95EE;&#x9898;&#x3002;&#x8FD9;&#x4E00;&#x7AE0;&#x8282;&#x5C31;&#x901A;&#x8FC7;Retrofit&#x7ED3;&#x5408;RxJava&#x4E2D;&#x7684;FlatMap&#x64CD;&#x4F5C;&#x7B26;&#x6765;&#x5904;&#x7406;<strong>&#x5D4C;&#x5957;&#x8BF7;&#x6C42;</strong>&#x7684;&#x95EE;&#x9898;</p>
+</blockquote>
+<h2 id="&#x5185;&#x5BB9;&#x63D0;&#x8981;">&#x5185;&#x5BB9;&#x63D0;&#x8981;</h2>
+<ul>
+<li>RxJava&#x7B80;&#x8981;&#x4ECB;&#x7ECD;</li>
+<li>&#x5D4C;&#x5957;&#x8BF7;&#x6C42;&#x4E3E;&#x4F8B;</li>
+<li>&#x8FD0;&#x7528;flatMap</li>
+<li>map&#x548C;flatMap</li>
+<li>RxJava&#x4E0E;Retrofit&#x914D;&#x5408;&#x89E3;&#x51B3;&#x5D4C;&#x5957;&#x8BF7;&#x6C42;</li>
+</ul>
+<h2 id="rxjava&#x7B80;&#x5355;&#x4ECB;&#x7ECD;">RxJava&#x7B80;&#x5355;&#x4ECB;&#x7ECD;</h2>
+<p>&#x8FD9;&#x91CC;&#x5E76;&#x4E0D;&#x6253;&#x7B97;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;RxJava&#x7684;&#x7528;&#x6CD5;&#x548C;&#x539F;&#x7406;&#xFF0C;&#x8FD9;&#x65B9;&#x9762;&#x7684;&#x6587;&#x7AE0;&#x5DF2;&#x7ECF;&#x5F88;&#x591A;&#x4E86;&#xFF0C;&#x672C;&#x4EBA;&#x4E5F;&#x662F;&#x7B80;&#x5355;&#x4F7F;&#x7528;&#x3002;&#x5E0C;&#x671B;&#x540E;&#x9762;&#x5927;&#x5BB6;&#x80FD;&#x591F;&#x591A;&#x5C1D;&#x8BD5;&#xFF0C;&#x591A;&#x4F7F;&#x7528;&#x4F7F;&#x6211;&#x4EEC;&#x66F4;&#x6DF1;&#x523B;&#x7406;&#x89E3;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x548C;&#x719F;&#x7EC3;&#x5E94;&#x7528;RxJava&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#x3002;&#x8FD9;&#x91CC;&#x4EC5;&#x4EC5;&#x9610;&#x91CA;&#x672C;&#x4EBA;&#x5BF9;&#x4E8E;RxJava&#x7684;&#x611F;&#x6027;&#x4E0A;&#x7684;&#x7406;&#x89E3;&#x3002;&#x5148;&#x4E0A;&#x4E00;&#x4E2A;&#x56FE;:
+<img src="https://upload-images.jianshu.io/upload_images/2208102-c5d32034c00c4c57.jpg" alt="RxJava OverView"></p>
+<p>&#x6211;&#x4EEC;&#x90FD;&#x77E5;&#x9053;RxJava&#x662F;&#x57FA;&#x4E8E;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x548C;&#x4F20;&#x7EDF;&#x7684;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#x53C8;&#x6709;&#x5F88;&#x591A;&#x7684;&#x533A;&#x522B;&#x3002;&#x4F20;&#x7EDF;&#x7684;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#x66F4;&#x6CE8;&#x91CD;&#x8BA2;&#x9605;&#x548C;&#x53D1;&#x5E03;&#x8FD9;&#x4E2A;&#x52A8;&#x4F5C;&#xFF0C;&#x800C;RxJava&#x7684;&#x91CD;&#x70B9;&#x5728;&#x4E8E;&#x6570;&#x636E;&#x7684;&quot;&#x6D41;&#x52A8;&quot;&#x3002;&#x7B80;&#x5355;&#x7684;&#x8BF4;Observable&#x5C31;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E00;&#x4E2A;&#x76D2;&#x5B50;&#xFF0C;&#x90A3;&#x4E48;Observable&#x5C31;&#x662F;&#x628A;&#x6570;&#x636E;&#x6216;&#x8005;&#x4E8B;&#x4EF6;&#x7ED9;&#x88C5;&#x8FDB;&#x4E86;&#x8FD9;&#x4E2A;&#x6613;&#x4E8E;&#x62FF;&#x53D6;&#x7684;&#x76D2;&#x5B50;&#x91CC;&#x9762;,&#x8BA9;&#x8BA2;&#x9605;&#x8005;/&#x4E0B;&#x4E00;&#x7EA7;&#x522B;&#x7684;&#x76D2;&#x5B50;&#x53EF;&#x4EE5;&#x62FF;&#x5230;&#x800C;&#x5904;&#x7406;&#x3002;&#x8FD9;&#x6837;&#x4F9D;&#x8D56;&#xFF0C;&#x539F;&#x6765;&#x9759;&#x6001;&#x7684;&#x6570;&#x636E;/&#x4E8B;&#x4EF6;&#x5C31;&#x88AB;&#x6D41;&#x52A8;&#x8D77;&#x6765;&#x4E86;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x5728;&#x5DE5;&#x5382;&#x6D41;&#x6C34;&#x4F5C;&#x4E1A;&#x6D41;&#x7A0B;&#xFF0C;&#x5176;&#x5B9E;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;RxJava&#x4E2D;&#x7684;filter/map/merge&#x7B49;Observable&#x64CD;&#x4F5C;&#x7B26;&#x770B;&#x505A;&#x6210;&#x52A0;&#x5DE5;&#x673A;&#x5668;&#xFF0C;&#x7ECF;&#x8FC7;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x64CD;&#x4F5C;&#x540E;&#xFF0C;&#x5927;&#x575D;&#x6570;&#x636E;&#x6D41;&#x88AB;&#x8FC7;&#x6EE4;&#x88AB;&#x5408;&#x5E76;&#x5E76;&#x88AB;&#x5904;&#x7406;&#xFF0C;&#x4ECE;&#x800C;&#x7075;&#x6D3B;&#x7684;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x6D41;&#x52A8;&#x8FDB;&#x884C;&#x7BA1;&#x5236;&#xFF0C;&#x8BA9;&#x6700;&#x7EC8;&#x7684;&#x4F7F;&#x7528;&#x8005;&#x7075;&#x6D3B;&#x7684;&#x62FF;&#x5230;&#x3002;</p>
+<h2 id="&#x5D4C;&#x5957;&#x8BF7;&#x6C42;&#x9879;&#x76EE;&#x4E3E;&#x4F8B;">&#x5D4C;&#x5957;&#x8BF7;&#x6C42;&#x9879;&#x76EE;&#x4E3E;&#x4F8B;</h2>
+<p>&#x8FD9;&#x91CC;&#x5F00;&#x59CB;&#x8FDB;&#x5165;&#x6574;&#x4F53;&#xFF0C;&#x5F00;&#x59CB;&#x4E3E;&#x4E00;&#x4E2A;&#x5D4C;&#x5957;&#x8BF7;&#x6C42;&#x7684;&#x4F8B;&#x5B50;&#x3002;
+&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x8FD9;&#x4E24;&#x4E2A;&#x63A5;&#x53E3;:</p>
+<ol>
+<li><em>api/json/user/login.do</em>  &#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x4E9B;&#x5168;&#x5C40;&#x914D;&#x7F6E;</li>
+<li><em>api/json/user/detail.json</em> &#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;</li>
+</ol>
+<p>&#x6211;&#x4EEC;&#x6700;&#x7EC8;&#x7684;&#x76EE;&#x7684;&#x662F;&#x8BF7;&#x6C42;1&#x63A5;&#x53E3;&#x518D;&#x8BF7;&#x6C42;&#xFF12;&#x63A5;&#x53E3;&#x540E;&#x518D;&#x80FD;&#x8FDB;&#x5165;&#x9996;&#x9875;&#x6D4F;&#x89C8;&#x5546;&#x54C1;&#x3002;&#x5047;&#x8BBE;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x62C9;&#x53D6;&#x7B2C;&#x4E8C;&#x4E2A;&#x63A5;&#x53E3;&#x9700;&#x8981;</p>
+<h2 id="&#x8FD0;&#x7528;flatmap">&#x8FD0;&#x7528;flatMap</h2>
+<p><img src="https://raw.githubusercontent.com/wiki/ReactiveX/RxJava/images/rx-operators/flatMap.png" alt="flatMap&#x7BA1;&#x9053;&#x56FE;"></p>
+<p>&#x732E;&#x4E0A;faltMap&#x7BA1;&#x9053;&#x6D41;&#x5411;&#x56FE;</p>
+<hr>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x653E;&#x51FA;RxJava&#x5927;&#x6CD5;&#x4E86;&#xFF0C;flatMap&#x662F;&#x4E00;&#x4E2A;Overvable&#x7684;&#x64CD;&#x4F5C;&#x7B26;,RxJava2&#x662F;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;Function&#x7684;&#x95ED;&#x5305;&#xFF0C;&#x8FD9;&#x4E2A;&#x95ED;&#x5305;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x662F;&#x5F85;&#x64CD;&#x4F5C;&#x7684;&#x4E0A;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x6D41;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x662F;&#x8FD9;&#x4E2A;flatMap&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#x540E;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F;&#x88AB;&#x5C01;&#x88C5;&#x7684;Observable&#x3002;&#x8BF4;&#x767D;&#x4E86;&#x5C31;&#x662F;&#x8BB2;&#x4E00;&#x4E2A;&#x591A;&#x7EA7;&#x6570;&#x5217;&#x201C;&#x62CD;&#x6241;&#x201D;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x4E00;&#x96C6;&#x6570;&#x5217;&#x3002;
+&#x6309;&#x7167;&#x4E0A;&#x9762;&#x7684;&#x81EA;&#x7406;&#xFF0C;faltMap&#x5C06;&#x63A5;&#x53D7;Login&#x63A5;&#x53E3;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x7136;&#x540E;&#x83B7;&#x53D6;user detail&#x63A5;&#x53E3;&#x7684;&#x6570;&#x636E;&#x7684;&#x8FD9;&#x4E2A;&#x4E8C;&#x7EF4;&#x8FC7;&#x7A0B;&#x7EBF;&#x6027;&#x5316;&#x4E86;&#xFF0C;&#x53D8;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x53EF;&#x89C2;&#x6D4B;&#x7684;&#x8FDE;&#x7EED;&#x7684;&#x6570;&#x636E;&#x6D41;&#x3002;</p>
+<p>&#x4E8E;&#x662F;&#x4EE3;&#x7801;&#x662F;:</p>
+<pre><code class="lang-java">API.getService()
+.doLogin(userName,Password)
+.flatMap(response-&gt;API.getService().getUserDetail())
+.compose(<span class="hljs-keyword">this</span>.bindTOLifecyle())
+.observeOn(AndroidSchedulers.mainThread())
+.subscribe(<span class="hljs-keyword">new</span> DefaultObserver&lt;LoginInfo&gt;() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSuccess</span><span class="hljs-params">(LoginInfo data)</span> </span>{
+        <span class="hljs-comment">// &#x8FDB;&#x5165;&#x9996;&#x9875;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFailure</span><span class="hljs-params">(String errMsg, String errCOde, LoginInfo errData)</span> </span>{
+        <span class="hljs-comment">// &#x9519;&#x8BEF;&#x5904;&#x7406;</span>
+    }
+
+})
+</code></pre>
+<p>flatMap&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x5BF9;&#x4F20;&#x5165;&#x7684;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x8FD4;&#x56DE;&#x4E0B;&#x4E00;&#x7EA7;&#x6240;&#x8981;&#x7684;Observable&#x5305;&#x88C5;&#x3002;</p>
+<h2 id="map&#x548C;faltmap">map&#x548C;faltMap</h2>
+<p>&#x8FD0;&#x7528;flatMap&#x7684;&#x5730;&#x65B9;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x7528;map&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x662F;&#x6709;&#x533A;&#x522B;&#x7684;&#x3002;&#x5148;&#x770B;&#x4E0B;map&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x7528;&#x6CD5;:</p>
+<pre><code class="lang-java">API.getService()
+.doLogin(userName, Password)
+.map(response-&gt; concerLoginInfoToDetail())
+.subscribeOn(Schedulers.io())
+.onserveOn(AndroidScedulers.mainThread()
+.subscrbe(<span class="hljs-keyword">new</span> Action&lt;UserDetail&gt;) {
+    <span class="hljs-meta">@override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">call</span><span class="hljs-params">(UserDetail detail)</span> </span>{
+     <span class="hljs-comment">// use the detail</span>
+    }
+})
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;map&#x4E5F;&#x662F;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;Function&#x95ED;&#x5305;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x95ED;&#x5305;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x5373;&#x8FD4;&#x56DE;&#x503C;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x88AB;&#x5305;&#x88C5;&#x7684;Observable&#xFF0C;&#x800C;&#x662F;&#x5B9E;&#x9645;&#x7684;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#xFF0C;&#x7531;&#x4E8E;call&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;LoginInfo&#xFF0C;&#x6240;&#x4EE5;<strong>conventLoginInfoToUserDetail()</strong>&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x80FD;&#x7528;Retrofit2&#x7684;&#x65B9;&#x5F0F;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;Observable&#x4E86;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x662F;&#x6709;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FD9;&#x79CD;&#x5D4C;&#x5957;&#x7684;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF0C;&#x7531;&#x4E8E;&#x63A5;&#x5230;&#x4E0A;&#x7AEF;&#x6570;&#x636E;&#x6D41;&#x5230;&#x5904;&#x7406;&#x540E;&#x5C06;&#x7ED3;&#x679C;&#x6570;&#x636E;&#x653E;&#x5165;&#x4E0B;&#x7AEF;&#x6570;&#x636E;&#x6D41;&#x662F;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x800C;<strong>convertLoginInfotoUserDetail()</strong>&#x8FD9;&#x79CD;&#x76F4;&#x63A5;&#x5C06;LoginInfo&#x8F6C;&#x5316;&#x4E3A;UserDetail&#x662F;&#x6CA1;&#x6CD5;&#x505A;&#x5230;&#x5F02;&#x6B65;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x3002;&#x90A3;&#x4E48;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x6700;&#x597D;&#x8FD8;&#x662F;&#x7528;flatMap&#x5E76;&#x901A;&#x8FC7;retrofit&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x83B7;&#x53D6;Observable&#x3002;&#x8981;&#x77E5;&#x9053;&#xFF0C;Rxjava&#x7684;&#x4E00;&#x4E2A;&#x7CBE;&#x9AD3;&#x5C31;&#x662F;&#x201C;&#x5F02;&#x6B65;&#x201D;&#x3002;</p>
+<h2 id="rxjava&#x4E0E;retrofit&#x914D;&#x5408;&#x89E3;&#x51B3;&#x5D4C;&#x5957;&#x8BF7;&#x6C42;">RxJava&#x4E0E;Retrofit&#x914D;&#x5408;&#x89E3;&#x51B3;&#x5D4C;&#x5957;&#x8BF7;&#x6C42;</h2>
+<p>&#x8FD9;&#x91CC;&#x8BE5;&#x8BA8;&#x8BBA;Retrofit&#x4E86;&#x3002;&#x53EF;&#x4EE5;&#x8BF4;Retrofit&#x5C31;&#x662F;&#x4E3A;&#x4E86;RxJava&#x800C;&#x751F;&#x7684;&#x3002;&#x6211;&#x53EF;&#x4EE5;&#x8D1F;&#x8D23;&#x4EFB;&#x7684;&#x8DDF;&#x4F60;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#x6CA1;&#x6709;&#x4F7F;&#x7528;RxJava&#x7684;&#x8BDD;&#xFF0C;&#x4F7F;&#x7528;Retrofit&#x548C;android-async-http&#x662F;&#x6CA1;&#x6709;&#x533A;&#x522B;&#x7684;&#xFF01;&#x8981;&#x7528;Retrofit&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x6700;&#x597D;&#x6216;&#x8005;&#x8BF4;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x4E5F;&#x4F7F;&#x7528;RxJava&#x8FDB;&#x884C;&#x7F16;&#x7A0B;&#x3002;</p>
+<p>Retrofit&#x6709;callback&#x548C;Observable&#x4E24;&#x79CD;&#x6A21;&#x5F0F;&#xFF0C;&#x524D;&#x8005;&#x5C31;&#x50CF;&#x4F20;&#x7EDF;&#x7684;Volley&#x4E00;&#x6837;&#xFF0C;&#x6709;successs&#x548C;fail&#x7684;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x5728;success&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x4E2D;&#x5904;&#x7406;&#x7ED3;&#x679C;&#xFF1B;&#x800C;Observable&#x6A21;&#x5F0F;&#x662F;&#x5C06;&#x8BF7;&#x6C42;&#x56DE;&#x6765;&#x7684;&#x6570;&#x636E;&#x7531;Retrofit&#x6846;&#x67B6;&#x81EA;&#x52A8;&#x7684;&#x5E2E;&#x4F60;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x76D2;&#x5B50;&#xFF0C;&#x5373;&#x81EA;&#x52A8;&#x5E2E;&#x4F60;&#x88C5;&#x914D;&#x6210;&#x4E86;&#x542B;&#x6709;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x7684;Observable&#xFF0C;&#x4F9B;&#x4F60;&#x4F7F;&#x7528;RxJava&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#x968F;&#x610F;&#x7075;&#x6D3B;&#x7684;&#x8FDB;&#x884C;&#x53D8;&#x6362;&#x3002;</p>
+<p>callback&#x6A21;&#x5F0F;&#x7684;Retrofit&#x662F;&#x8FD9;&#x6837;&#x5EFA;&#x7ACB;&#x7684;:</p>
+<pre><code class="lang-java">retrofit = <span class="hljs-keyword">new</span> Retrofit.Builder()
+                .baseUrl(SERVER_URL)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+</code></pre>
+<p>Observable&#x6A21;&#x5F0F;&#x662F;&#x8FD9;&#x6837;&#x5B50;&#x5EFA;&#x7ACB;&#x7684;:</p>
+<pre><code class="lang-java">retrofit2 = <span class="hljs-keyword">new</span> Retrofit.Builder()
+                .baseUrl(SERVER_URL)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .build();
+</code></pre>
+<p>&#x5373;addCallAdapterFactory&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5728;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x5728;RxJavaCallAdapterFactory&#x7684;&#x6E90;&#x7801;&#x6CE8;&#x91CA;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FD9;&#x4E48;&#x4E00;&#x53E5;&#x8BDD;&#xFF1A;</p>
+<blockquote>
+<p>Response wrapped body (e.g., {@code Observable<response<user>&gt;}) calls {@code onNext} with a {@link Response} object for all HTTP responses and calls {@code onError} with {@link IOException} for network errors</response<user></p>
+</blockquote>
+<p>&#x5373;&#x5B83;&#x5C06;&#x8FD4;&#x56DE;&#x503C;body&#x5305;&#x88F9;&#x4E0A;&#x4E86;&#x4E00;&#x5C42;&quot;<strong>Observable</strong>&quot;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="基本调用.html" class="navigation navigation-prev " aria-label="Previous page: 基本调用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="并发调用.html" class="navigation navigation-next " aria-label="Next page: 并发调用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"嵌套调用","level":"1.5.2","depth":2,"next":{"title":"并发调用","level":"1.5.3","depth":2,"path":"调用方式/并发调用.md","ref":"调用方式/并发调用.md","articles":[]},"previous":{"title":"基本调用","level":"1.5.1","depth":2,"path":"调用方式/基本调用.md","ref":"调用方式/基本调用.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Aaron Tsai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"AL网络框架替换及使用文档","gitbook":"*","description":"由于async-http-client的网络框架已过时，造成维护成本高，开发易用性差，现将其替换成okhttp3"},"file":{"path":"调用方式/嵌套调用.md","mtime":"2018-04-08T03:21:08.865Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-27T11:33:50.789Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
